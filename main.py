@@ -61,8 +61,7 @@ def prompt_chain(customer_complaint: str):
     print("Suggested categories: ", step2_response)
 
     # Step 3: Determine final category
-    categories = ["account opening", "billing issue", "account access", "transaction inquiry",
-                  "card services", "account statement", "loan inquiry", "general information"]
+    categories = ["account opening", "billing issue", "account access", "transaction inquiry", "card services", "account statement", "loan inquiry", "general information"]
 
     step3_prompt = f"""
     Based on these categories: {", ".join(categories)},
@@ -95,5 +94,10 @@ def prompt_chain(customer_complaint: str):
 
 # Run
 if __name__ == "__main__":
-    complaint = "My loan application is yet to be approved, why the delay?"
+    print("Customer Support AI Agent")
+    complaint = input("Enter customer complaint: ").strip()
+    if not complaint:
+        print("Error: Complaint cannot be empty.")
+        sys.exit(1)
+
     prompt_chain(complaint)

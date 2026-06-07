@@ -46,10 +46,6 @@ Get your API key from: https://openrouter.ai/keys
 ## Usage
 Run the script with a customer complaint:
 ```Bash
-   python main.py "My loan application is yet to be approved, why the delay?"
-```   
-Or without arguments (uses default example):
-```Bash
    python main.py
 ```
 ## Requirements
